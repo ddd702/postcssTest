@@ -1,0 +1,57 @@
+@import "base";
+
+/* Contents of partials/_base.css: `body { background: black; }` */
+
+$color:#fff;
+$blue: #056ef0;
+$column: 200px;
+html {
+    font-size: calc($root_font_size*1px);
+}
+.s-bar{
+    background-color:#f70;
+    position:absolute;
+    top:0;
+    right:0;
+    width:5px;
+    height:50px;
+    z-index:100;
+}
+.itm-wrap{
+    position:relative;
+    height:300px;
+    overflow-y: scroll;
+
+}
+.itm-con{
+
+}
+.itm-cell {
+    position: relative;
+    line-height: 70px;
+    text-align: center;
+    border-bottom:1px solid #ddd;
+    .itm-con {
+        background-color: #f2f2f2;
+        position: relative;
+        z-index: 5;
+        transition:all ease-out 0.3s;
+    }
+    .itm-btns {
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background-color: #f70;
+        color: #fff;
+        text-align: right;
+    }
+    .itm-btn {
+        display: inline-block;
+        padding: 0 20px;
+        &:active{
+            background-color: #f00;
+        };
+    }
+}
