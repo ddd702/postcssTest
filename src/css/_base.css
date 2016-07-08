@@ -1,0 +1,38 @@
+$root_font_size:20;
+$scaleNum:2;
+$remRate:calc($scaleNum*$root_font_size*1rem);
+$pageW:640;
+*{
+    margin:0;
+    padding:0;
+}
+@define-mixin txt-hide {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@define-mixin clamp $num:2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $num;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+@define-mixin clearfix {
+    &:before,
+    &:after {
+        content: " ";
+        /* 1 */
+        display: table;
+        /* 2 */
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@define-mixin fontSize $initSize:$root_font_size {
+    font-size: calc(($initSize/$root_font_size)*1rem);
+}
